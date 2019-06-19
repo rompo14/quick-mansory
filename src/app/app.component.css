@@ -1,0 +1,12 @@
+.mansory {
+  columns: 3 200px;
+  column-gap: 1rem;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  margin: 0 1rem 1rem 0;
+  background: #ddd;
+  break-inside: avoid;
+}
