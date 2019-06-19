@@ -1,9 +1,9 @@
 <nav class="navbar navbar-light bg-light mb-3">
   <div class="container">
-    <form class="form-inline" (ngSubmit)="onSubmit($event)">
+    <form class="form-inline" (ngSubmit)="onSubmit()">
       <div class="form-group mx-sm-3 mb-2">
         <label for="num" class="sr-only">Кол-во элементов</label>
-        <input type="number" class="form-control" id="num" name="items" min="1">
+        <input type="number" class="form-control" id="num" name="items" min="1" [(ngModel)]="items" [value]="items">
       </div>
       <button type="submit" class="btn btn-primary mb-2">Сгенерировать</button>
     </form>

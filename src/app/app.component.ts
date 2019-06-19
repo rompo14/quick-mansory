@@ -8,12 +8,11 @@ import {Component, ViewEncapsulation} from '@angular/core';
 })
 export class AppComponent {
   title = 'novator';
+  items = 1;
 
-  onSubmit(e) {
-    e.preventDefault();
+  onSubmit() {
     const mansory = document.getElementsByClassName('mansory')[0];
-    console.log(mansory);
-    for (let i = 0; i < e.target.items.value; i++) {
+    for (let i = 0; i < this.items; i++) {
       mansory.insertAdjacentHTML('beforeend', '<div class="item" style="height: ' + (Math.floor(Math.random() * (400 - 200)) + 200) + 'px"></div>');
     }
   }
